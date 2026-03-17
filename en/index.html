@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Agents Uni — Universal Protocol Layer for AI Agent Organizations</title>
+  <meta name="description" content="Define how AI agents organize, collaborate, compete, and evolve — not just what they do." />
+  <meta property="og:title" content="Agents Uni — AI Agent Organization Protocol" />
+  <meta property="og:description" content="Define how AI agents organize, collaborate, compete, and evolve." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://agents-uni.github.io/en/" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body class="min-h-screen bg-gray-950 text-gray-100 antialiased">
+
+  <!-- Nav -->
+  <nav class="fixed top-0 w-full z-50 bg-gray-950/80 border-b border-gray-800/50">
+    <div class="max-w-6xl mx-auto px-6 h-14 flex items-center justify-between">
+      <a href="../" class="text-lg font-semibold gradient-text">Agents Uni</a>
+      <div class="flex items-center gap-6 text-sm text-gray-400">
+        <a href="#ecosystem" class="hover:text-gray-100 transition-colors hidden sm:inline">Ecosystem</a>
+        <a href="#architecture" class="hover:text-gray-100 transition-colors hidden sm:inline">Architecture</a>
+        <a href="#quickstart" class="hover:text-gray-100 transition-colors hidden sm:inline">Quick Start</a>
+        <a href="https://github.com/agents-uni" class="hover:text-gray-100 transition-colors" target="_blank" rel="noopener">GitHub</a>
+        <a href="../" class="px-2 py-1 rounded border border-gray-700 hover:border-gray-500 text-gray-300 hover:text-gray-100 transition-colors text-xs font-medium">中文</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="relative pt-32 pb-24 px-6 overflow-hidden">
+    <div class="hero-glow"></div>
+    <div class="max-w-3xl mx-auto text-center relative z-10">
+      <h1 class="text-5xl sm:text-6xl font-bold tracking-tight mb-4">
+        <span class="gradient-text">Agents Uni</span>
+      </h1>
+      <p class="text-xl sm:text-2xl text-gray-400 mb-6">Universal Protocol Layer for AI Agent Organizations</p>
+      <blockquote class="text-lg text-gray-500 italic mb-10 max-w-lg mx-auto">
+        "While improving productivity, what we truly need is better production relationships."
+      </blockquote>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <div class="code-block inline-flex items-center gap-3 text-sm">
+          <span class="text-gray-500">$</span>
+          <span>npm install <span class="text-violet-400">@agents-uni/core</span></span>
+          <button onclick="copyToClipboard('npm install @agents-uni/core', this)" class="copy-btn text-gray-500 hover:text-gray-300 text-xs ml-2">Copy</button>
+        </div>
+        <a href="https://github.com/agents-uni" target="_blank" rel="noopener"
+           class="inline-flex items-center justify-center gap-2 px-6 py-2.5 rounded-lg border border-gray-700 text-gray-300 hover:text-white hover:border-gray-500 transition-colors text-sm font-medium">
+          GitHub
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why -->
+  <section class="py-20 px-6 fade-in">
+    <div class="max-w-5xl mx-auto">
+      <h2 class="text-3xl font-bold text-center mb-4">Why Agents Uni?</h2>
+      <p class="text-gray-500 text-center mb-12 max-w-2xl mx-auto">
+        Human society spent millennia evolving organizational forms — bureaucracy, corporations, military, cooperatives. This wasn't random, but optimal structures under specific constraints. We bring this thinking to AI agents.
+      </p>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="feature-card rounded-xl bg-gray-900 border border-gray-800 p-6">
+          <div class="w-10 h-10 rounded-lg bg-violet-500/10 flex items-center justify-center mb-4">
+            <svg class="w-5 h-5 text-violet-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+          </div>
+          <h3 class="text-lg font-semibold mb-2">Organization Protocols</h3>
+          <p class="text-gray-400 text-sm leading-relaxed">Not just orchestration. Declare organizational structures, roles, permissions, and processes with <code class="text-violet-400">universe.yaml</code> — let agents collaborate like members of an organization.</p>
+        </div>
+        <div class="feature-card rounded-xl bg-gray-900 border border-gray-800 p-6">
+          <div class="w-10 h-10 rounded-lg bg-blue-500/10 flex items-center justify-center mb-4">
+            <svg class="w-5 h-5 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/></svg>
+          </div>
+          <h3 class="text-lg font-semibold mb-2">Multi-dimensional Relations</h3>
+          <p class="text-gray-400 text-sm leading-relaxed">Not just weighted edges. Each relationship has independent trust, authority, rivalry, and affinity dimensions, evolving through event sourcing with memory and emotional valence.</p>
+        </div>
+        <div class="feature-card rounded-xl bg-gray-900 border border-gray-800 p-6">
+          <div class="w-10 h-10 rounded-lg bg-emerald-500/10 flex items-center justify-center mb-4">
+            <svg class="w-5 h-5 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+          </div>
+          <h3 class="text-lg font-semibold mb-2">Emergence Detection</h3>
+          <p class="text-gray-400 text-sm leading-relaxed">Not just predefined. Automatically discover new relationships from interaction patterns — frequent collaborators become allies, repeated conflicts create rivalries. Relationships are alive.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Ecosystem -->
+  <section id="ecosystem" class="py-20 px-6 fade-in">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="text-3xl font-bold text-center mb-12">Ecosystem</h2>
+
+      <!-- Core -->
+      <div class="gradient-border p-6 mb-6">
+        <div class="flex items-start justify-between flex-wrap gap-4">
+          <div>
+            <h3 class="text-xl font-semibold mb-1">@agents-uni/core</h3>
+            <p class="text-gray-400 text-sm mb-3">Protocol layer — spec parser, runtime engine, SOUL.md generator, OpenClaw bridge</p>
+            <p class="text-gray-500 text-xs leading-relaxed max-w-lg">
+              Define agent organizations with <code class="text-violet-400">universe.yaml</code>: roles, hierarchy, relationships, permissions, workflows.
+              The engine parses specs and generates SOUL.md (persona files) for each agent, deploying to the OpenClaw runtime.
+            </p>
+          </div>
+          <div class="flex gap-3 text-xs">
+            <a href="https://www.npmjs.com/package/@agents-uni/core" target="_blank" rel="noopener" class="text-gray-500 hover:text-gray-300 transition-colors">npm</a>
+            <a href="https://github.com/agents-uni/core" target="_blank" rel="noopener" class="text-gray-500 hover:text-gray-300 transition-colors">GitHub</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Rel -->
+      <div class="gradient-border p-6 mb-6">
+        <div class="flex items-start justify-between flex-wrap gap-4">
+          <div>
+            <h3 class="text-xl font-semibold mb-1">@agents-uni/rel</h3>
+            <p class="text-gray-400 text-sm mb-3">Multi-dimensional relationship engine — event-sourced, memory-backed, evolvable</p>
+            <p class="text-gray-500 text-xs leading-relaxed max-w-lg">
+              Zero dependencies. Relationships are no longer single weights — each has multiple dimensions (trust, authority, rivalry, affinity),
+              evolving through event sourcing with short-term events consolidating into long-term memory and patterns. Supports automatic emergence of new relationships from interactions.
+            </p>
+          </div>
+          <div class="flex gap-3 text-xs">
+            <a href="https://www.npmjs.com/package/@agents-uni/rel" target="_blank" rel="noopener" class="text-gray-500 hover:text-gray-300 transition-colors">npm</a>
+            <a href="https://github.com/agents-uni/rel" target="_blank" rel="noopener" class="text-gray-500 hover:text-gray-300 transition-colors">GitHub</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Zhenhuan (Demo) -->
+      <div class="rounded-xl bg-gray-900 border border-gray-800 p-6">
+        <div class="flex items-start justify-between flex-wrap gap-4">
+          <div>
+            <div class="flex items-center gap-2 mb-1">
+              <h3 class="text-lg font-medium text-gray-300">@agents-uni/zhenhuan</h3>
+              <span class="demo-badge">Demo</span>
+            </div>
+            <p class="text-gray-500 text-sm mb-2">Palace drama agent competition — ELO rating, horse-race, seasonal progression</p>
+            <p class="text-gray-600 text-xs leading-relaxed max-w-lg">
+              A complete example built on core + rel, demonstrating how to define a competitive agent system using organization protocols.
+            </p>
+          </div>
+          <div class="flex gap-3 text-xs">
+            <a href="https://www.npmjs.com/package/@agents-uni/zhenhuan" target="_blank" rel="noopener" class="text-gray-600 hover:text-gray-400 transition-colors">npm</a>
+            <a href="https://github.com/agents-uni/zhenhuan" target="_blank" rel="noopener" class="text-gray-600 hover:text-gray-400 transition-colors">GitHub</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Architecture -->
+  <section id="architecture" class="py-20 px-6 fade-in">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="text-3xl font-bold text-center mb-12">Architecture</h2>
+      <pre class="code-block text-center text-sm leading-loose"><span class="text-gray-500">// Your organization definition</span>
+<span class="type">universe.yaml</span>
+    <span class="text-gray-600">│</span>
+    <span class="text-gray-600">▼</span>
+<span class="func">@agents-uni/core</span>          <span class="comment">← Protocol parser + SOUL.md generation</span>
+    <span class="text-gray-600">│</span>
+    <span class="text-gray-600">├──</span> <span class="func">@agents-uni/rel</span>    <span class="comment">← Multi-dim relations + emergence + memory</span>
+    <span class="text-gray-600">│</span>
+    <span class="text-gray-600">▼</span>
+<span class="type">OpenClaw / SOUL.md</span>       <span class="comment">← Agent runtime deployment</span></pre>
+    </div>
+  </section>
+
+  <!-- Quick Start -->
+  <section id="quickstart" class="py-20 px-6 fade-in">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="text-3xl font-bold text-center mb-12">Quick Start</h2>
+
+      <div class="space-y-6">
+        <div>
+          <h3 class="text-sm font-medium text-gray-500 uppercase tracking-wider mb-3">1. Install</h3>
+          <div class="code-block relative">
+            <span class="text-gray-500">$</span> npm install <span class="type">@agents-uni/core</span> <span class="type">@agents-uni/rel</span>
+            <button onclick="copyToClipboard('npm install @agents-uni/core @agents-uni/rel', this)" class="copy-btn absolute top-3 right-3 text-gray-500 hover:text-gray-300 text-xs">Copy</button>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="text-sm font-medium text-gray-500 uppercase tracking-wider mb-3">2. Define Your Organization</h3>
+          <pre class="code-block"><span class="comment"># universe.yaml</span>
+<span class="keyword">name</span>: <span class="string">my-team</span>
+<span class="keyword">agents</span>:
+  - <span class="keyword">id</span>: <span class="string">alice</span>
+    <span class="keyword">role</span>: <span class="string">leader</span>
+  - <span class="keyword">id</span>: <span class="string">bob</span>
+    <span class="keyword">role</span>: <span class="string">developer</span>
+<span class="keyword">relationships</span>:
+  - <span class="keyword">from</span>: <span class="string">alice</span>
+    <span class="keyword">to</span>: <span class="string">bob</span>
+    <span class="keyword">type</span>: <span class="string">supervises</span></pre>
+        </div>
+
+        <div>
+          <h3 class="text-sm font-medium text-gray-500 uppercase tracking-wider mb-3">3. Use It</h3>
+          <pre class="code-block"><span class="keyword">import</span> { <span class="func">loadUniverse</span>, <span class="func">createRelEngine</span> } <span class="keyword">from</span> <span class="string">'@agents-uni/core'</span>;
+
+<span class="keyword">const</span> config = <span class="keyword">await</span> <span class="func">loadUniverse</span>(<span class="string">'./universe.yaml'</span>);
+<span class="keyword">const</span> { graph, evolution } = <span class="func">createRelEngine</span>(config);
+
+<span class="comment">// Event-driven relationship evolution</span>
+evolution.<span class="func">processEvent</span>(<span class="string">'alice'</span>, <span class="string">'bob'</span>, <span class="string">'task.completed_well'</span>);
+<span class="comment">// → trust: 0.50 → 0.55, empowerment: 0.40 → 0.46</span></pre>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Philosophy -->
+  <section class="py-20 px-6 fade-in">
+    <div class="max-w-3xl mx-auto text-center">
+      <h2 class="text-3xl font-bold mb-8">Design Philosophy</h2>
+      <div class="grid sm:grid-cols-2 gap-6 text-left">
+        <div class="p-5 rounded-lg bg-gray-900/50 border border-gray-800/50">
+          <p class="text-sm font-medium mb-1">User at the Center</p>
+          <p class="text-xs text-gray-500">Every agent relationship is built around the user — serving emotional needs and improving task outcomes.</p>
+        </div>
+        <div class="p-5 rounded-lg bg-gray-900/50 border border-gray-800/50">
+          <p class="text-sm font-medium mb-1">Relationships as First-class Citizens</p>
+          <p class="text-xs text-gray-500">Not graph appendages, but entities with their own state, memory, and history.</p>
+        </div>
+        <div class="p-5 rounded-lg bg-gray-900/50 border border-gray-800/50">
+          <p class="text-sm font-medium mb-1">All Changes Through Events</p>
+          <p class="text-xs text-gray-500">Fully auditable, replayable, and persistable.</p>
+        </div>
+        <div class="p-5 rounded-lg bg-gray-900/50 border border-gray-800/50">
+          <p class="text-sm font-medium mb-1">Universal, Not Specialized</p>
+          <p class="text-xs text-gray-500">Not bound to any specific framework or runtime — works with any agent system.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-12 px-6 border-t border-gray-800/50">
+    <div class="max-w-5xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-gray-600">
+      <p>MIT License &middot; agents-uni</p>
+      <div class="flex gap-6">
+        <a href="https://github.com/agents-uni" target="_blank" rel="noopener" class="hover:text-gray-400 transition-colors">GitHub</a>
+        <a href="https://www.npmjs.com/org/agents-uni" target="_blank" rel="noopener" class="hover:text-gray-400 transition-colors">npm</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>

@@ -1,0 +1,152 @@
+/* Agents Uni — Custom styles (Tailwind CDN handles utility classes) */
+
+:root {
+  --accent-1: #8b5cf6; /* violet-500 */
+  --accent-2: #3b82f6; /* blue-500 */
+  --bg-primary: #030712; /* gray-950 */
+  --bg-card: #111827;    /* gray-900 */
+  --bg-card-hover: #1f2937; /* gray-800 */
+  --border: #374151;     /* gray-700 */
+  --text-primary: #f3f4f6; /* gray-100 */
+  --text-secondary: #9ca3af; /* gray-400 */
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+/* Gradient text */
+.gradient-text {
+  background: linear-gradient(135deg, var(--accent-1), var(--accent-2));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Gradient border card */
+.gradient-border {
+  position: relative;
+  background: var(--bg-card);
+  border-radius: 0.75rem;
+}
+
+.gradient-border::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-radius: 0.8rem;
+  padding: 1px;
+  background: linear-gradient(135deg, var(--accent-1), var(--accent-2));
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+
+/* Code block */
+.code-block {
+  background: #0d1117;
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+  padding: 1rem 1.25rem;
+  font-family: 'SF Mono', 'Fira Code', 'JetBrains Mono', monospace;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  overflow-x: auto;
+}
+
+.code-block .comment { color: #6e7681; }
+.code-block .keyword { color: #ff7b72; }
+.code-block .string { color: #a5d6ff; }
+.code-block .func { color: #d2a8ff; }
+.code-block .type { color: #79c0ff; }
+
+/* Architecture diagram */
+.arch-line {
+  stroke: var(--accent-1);
+  stroke-width: 2;
+  fill: none;
+}
+
+.arch-node {
+  fill: var(--bg-card);
+  stroke: var(--accent-1);
+  stroke-width: 1.5;
+  rx: 8;
+}
+
+/* Scroll animations */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Nav */
+nav {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+/* Glow effect on hero */
+.hero-glow {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(139,92,246,0.15) 0%, transparent 70%);
+  pointer-events: none;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Feature card hover */
+.feature-card {
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-2px);
+  background-color: var(--bg-card-hover);
+}
+
+/* Demo badge */
+.demo-badge {
+  background: linear-gradient(135deg, #374151, #4b5563);
+  font-size: 0.625rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 0.125rem 0.5rem;
+  border-radius: 9999px;
+  color: var(--text-secondary);
+}
+
+/* Copy button */
+.copy-btn {
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+.code-block:hover .copy-btn {
+  opacity: 1;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-glow {
+    width: 300px;
+    height: 300px;
+  }
+}

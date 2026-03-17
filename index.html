@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Agents Uni — AI Agent 组织协议层</title>
+  <meta name="description" content="用组织设计的方式定义 AI Agent 的协作、竞争与进化。不只是调度编排，而是生产关系。" />
+  <meta property="og:title" content="Agents Uni — AI Agent 组织协议层" />
+  <meta property="og:description" content="用组织设计的方式定义 AI Agent 的协作、竞争与进化。" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://agents-uni.github.io" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="min-h-screen bg-gray-950 text-gray-100 antialiased">
+
+  <!-- Nav -->
+  <nav class="fixed top-0 w-full z-50 bg-gray-950/80 border-b border-gray-800/50">
+    <div class="max-w-6xl mx-auto px-6 h-14 flex items-center justify-between">
+      <a href="#" class="text-lg font-semibold gradient-text">Agents Uni</a>
+      <div class="flex items-center gap-6 text-sm text-gray-400">
+        <a href="#ecosystem" class="hover:text-gray-100 transition-colors hidden sm:inline">生态</a>
+        <a href="#architecture" class="hover:text-gray-100 transition-colors hidden sm:inline">架构</a>
+        <a href="#quickstart" class="hover:text-gray-100 transition-colors hidden sm:inline">快速开始</a>
+        <a href="https://github.com/agents-uni" class="hover:text-gray-100 transition-colors" target="_blank" rel="noopener">GitHub</a>
+        <a href="en/" class="px-2 py-1 rounded border border-gray-700 hover:border-gray-500 text-gray-300 hover:text-gray-100 transition-colors text-xs font-medium">EN</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="relative pt-32 pb-24 px-6 overflow-hidden">
+    <div class="hero-glow"></div>
+    <div class="max-w-3xl mx-auto text-center relative z-10">
+      <h1 class="text-5xl sm:text-6xl font-bold tracking-tight mb-4">
+        <span class="gradient-text">Agents Uni</span>
+      </h1>
+      <p class="text-xl sm:text-2xl text-gray-400 mb-6">AI Agent 组织协议层</p>
+      <blockquote class="text-lg text-gray-500 italic mb-10 max-w-lg mx-auto">
+        "提升生产力的同时，我们需要的是更优秀的生产关系。"
+      </blockquote>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <div class="code-block inline-flex items-center gap-3 text-sm">
+          <span class="text-gray-500">$</span>
+          <span>npm install <span class="text-violet-400">@agents-uni/core</span></span>
+          <button onclick="copyToClipboard('npm install @agents-uni/core', this)" class="copy-btn text-gray-500 hover:text-gray-300 text-xs ml-2">Copy</button>
+        </div>
+        <a href="https://github.com/agents-uni" target="_blank" rel="noopener"
+           class="inline-flex items-center justify-center gap-2 px-6 py-2.5 rounded-lg border border-gray-700 text-gray-300 hover:text-white hover:border-gray-500 transition-colors text-sm font-medium">
+          GitHub
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why -->
+  <section class="py-20 px-6 fade-in">
+    <div class="max-w-5xl mx-auto">
+      <h2 class="text-3xl font-bold text-center mb-4">为什么需要 Agents Uni？</h2>
+      <p class="text-gray-500 text-center mb-12 max-w-2xl mx-auto">
+        人类社会花了数千年演化出组织形式——这不是随机的，而是在特定约束下的最优结构。我们把这套思想带给 AI Agent。
+      </p>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="feature-card rounded-xl bg-gray-900 border border-gray-800 p-6">
+          <div class="w-10 h-10 rounded-lg bg-violet-500/10 flex items-center justify-center mb-4">
+            <svg class="w-5 h-5 text-violet-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+          </div>
+          <h3 class="text-lg font-semibold mb-2">组织协议</h3>
+          <p class="text-gray-400 text-sm leading-relaxed">不只是调度编排。用 <code class="text-violet-400">universe.yaml</code> 声明组织结构、角色、权限、流程——让 Agent 像组织中的成员一样协作。</p>
+        </div>
+        <div class="feature-card rounded-xl bg-gray-900 border border-gray-800 p-6">
+          <div class="w-10 h-10 rounded-lg bg-blue-500/10 flex items-center justify-center mb-4">
+            <svg class="w-5 h-5 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/></svg>
+          </div>
+          <h3 class="text-lg font-semibold mb-2">多维关系</h3>
+          <p class="text-gray-400 text-sm leading-relaxed">不只是权重边。每段关系有独立的信任、权威、竞争、亲和维度，通过事件溯源演化，带有记忆和情感基调。</p>
+        </div>
+        <div class="feature-card rounded-xl bg-gray-900 border border-gray-800 p-6">
+          <div class="w-10 h-10 rounded-lg bg-emerald-500/10 flex items-center justify-center mb-4">
+            <svg class="w-5 h-5 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+          </div>
+          <h3 class="text-lg font-semibold mb-2">涌现发现</h3>
+          <p class="text-gray-400 text-sm leading-relaxed">不只是预定义。从交互模式中自动发现新关系——频繁协作者成为盟友，反复冲突者成为对手。关系是活的。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Ecosystem -->
+  <section id="ecosystem" class="py-20 px-6 fade-in">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="text-3xl font-bold text-center mb-12">生态系统</h2>
+
+      <!-- Core -->
+      <div class="gradient-border p-6 mb-6">
+        <div class="flex items-start justify-between flex-wrap gap-4">
+          <div>
+            <h3 class="text-xl font-semibold mb-1">@agents-uni/core</h3>
+            <p class="text-gray-400 text-sm mb-3">协议层 — spec 解析、运行时引擎、SOUL.md 生成、OpenClaw 桥接</p>
+            <p class="text-gray-500 text-xs leading-relaxed max-w-lg">
+              用 <code class="text-violet-400">universe.yaml</code> 定义 Agent 组织：角色、层级、关系、权限、流程。
+              引擎解析 spec 并生成每个 Agent 的 SOUL.md（人格文件），部署到 OpenClaw 运行时。
+            </p>
+          </div>
+          <div class="flex gap-3 text-xs">
+            <a href="https://www.npmjs.com/package/@agents-uni/core" target="_blank" rel="noopener" class="text-gray-500 hover:text-gray-300 transition-colors">npm</a>
+            <a href="https://github.com/agents-uni/core" target="_blank" rel="noopener" class="text-gray-500 hover:text-gray-300 transition-colors">GitHub</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Rel -->
+      <div class="gradient-border p-6 mb-6">
+        <div class="flex items-start justify-between flex-wrap gap-4">
+          <div>
+            <h3 class="text-xl font-semibold mb-1">@agents-uni/rel</h3>
+            <p class="text-gray-400 text-sm mb-3">多维关系引擎 — 事件溯源、记忆驱动、可涌现</p>
+            <p class="text-gray-500 text-xs leading-relaxed max-w-lg">
+              零依赖。关系不再是单一权重——每段关系有多个维度（信任、权威、竞争、亲和），
+              通过事件溯源演化，短期事件固化为长期记忆和模式。支持从交互中自动涌现新关系。
+            </p>
+          </div>
+          <div class="flex gap-3 text-xs">
+            <a href="https://www.npmjs.com/package/@agents-uni/rel" target="_blank" rel="noopener" class="text-gray-500 hover:text-gray-300 transition-colors">npm</a>
+            <a href="https://github.com/agents-uni/rel" target="_blank" rel="noopener" class="text-gray-500 hover:text-gray-300 transition-colors">GitHub</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Zhenhuan (Demo) -->
+      <div class="rounded-xl bg-gray-900 border border-gray-800 p-6">
+        <div class="flex items-start justify-between flex-wrap gap-4">
+          <div>
+            <div class="flex items-center gap-2 mb-1">
+              <h3 class="text-lg font-medium text-gray-300">@agents-uni/zhenhuan</h3>
+              <span class="demo-badge">Demo</span>
+            </div>
+            <p class="text-gray-500 text-sm mb-2">宫斗 Agent 竞技 — ELO 评分、赛马制、赛季晋升</p>
+            <p class="text-gray-600 text-xs leading-relaxed max-w-lg">
+              基于 core + rel 构建的完整示例，展示如何用组织协议定义一个竞争型 Agent 系统。
+            </p>
+          </div>
+          <div class="flex gap-3 text-xs">
+            <a href="https://www.npmjs.com/package/@agents-uni/zhenhuan" target="_blank" rel="noopener" class="text-gray-600 hover:text-gray-400 transition-colors">npm</a>
+            <a href="https://github.com/agents-uni/zhenhuan" target="_blank" rel="noopener" class="text-gray-600 hover:text-gray-400 transition-colors">GitHub</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Architecture -->
+  <section id="architecture" class="py-20 px-6 fade-in">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="text-3xl font-bold text-center mb-12">架构</h2>
+      <pre class="code-block text-center text-sm leading-loose"><span class="text-gray-500">// 你的组织定义</span>
+<span class="type">universe.yaml</span>
+    <span class="text-gray-600">│</span>
+    <span class="text-gray-600">▼</span>
+<span class="func">@agents-uni/core</span>          <span class="comment">← 协议解析 + SOUL.md 生成</span>
+    <span class="text-gray-600">│</span>
+    <span class="text-gray-600">├──</span> <span class="func">@agents-uni/rel</span>    <span class="comment">← 多维关系 + 涌现 + 记忆</span>
+    <span class="text-gray-600">│</span>
+    <span class="text-gray-600">▼</span>
+<span class="type">OpenClaw / SOUL.md</span>       <span class="comment">← Agent 运行时部署</span></pre>
+    </div>
+  </section>
+
+  <!-- Quick Start -->
+  <section id="quickstart" class="py-20 px-6 fade-in">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="text-3xl font-bold text-center mb-12">快速开始</h2>
+
+      <div class="space-y-6">
+        <div>
+          <h3 class="text-sm font-medium text-gray-500 uppercase tracking-wider mb-3">1. 安装</h3>
+          <div class="code-block relative">
+            <span class="text-gray-500">$</span> npm install <span class="type">@agents-uni/core</span> <span class="type">@agents-uni/rel</span>
+            <button onclick="copyToClipboard('npm install @agents-uni/core @agents-uni/rel', this)" class="copy-btn absolute top-3 right-3 text-gray-500 hover:text-gray-300 text-xs">Copy</button>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="text-sm font-medium text-gray-500 uppercase tracking-wider mb-3">2. 定义组织</h3>
+          <pre class="code-block"><span class="comment"># universe.yaml</span>
+<span class="keyword">name</span>: <span class="string">my-team</span>
+<span class="keyword">agents</span>:
+  - <span class="keyword">id</span>: <span class="string">alice</span>
+    <span class="keyword">role</span>: <span class="string">leader</span>
+  - <span class="keyword">id</span>: <span class="string">bob</span>
+    <span class="keyword">role</span>: <span class="string">developer</span>
+<span class="keyword">relationships</span>:
+  - <span class="keyword">from</span>: <span class="string">alice</span>
+    <span class="keyword">to</span>: <span class="string">bob</span>
+    <span class="keyword">type</span>: <span class="string">supervises</span></pre>
+        </div>
+
+        <div>
+          <h3 class="text-sm font-medium text-gray-500 uppercase tracking-wider mb-3">3. 使用</h3>
+          <pre class="code-block"><span class="keyword">import</span> { <span class="func">loadUniverse</span>, <span class="func">createRelEngine</span> } <span class="keyword">from</span> <span class="string">'@agents-uni/core'</span>;
+
+<span class="keyword">const</span> config = <span class="keyword">await</span> <span class="func">loadUniverse</span>(<span class="string">'./universe.yaml'</span>);
+<span class="keyword">const</span> { graph, evolution } = <span class="func">createRelEngine</span>(config);
+
+<span class="comment">// 事件驱动关系演化</span>
+evolution.<span class="func">processEvent</span>(<span class="string">'alice'</span>, <span class="string">'bob'</span>, <span class="string">'task.completed_well'</span>);
+<span class="comment">// → trust: 0.50 → 0.55, empowerment: 0.40 → 0.46</span></pre>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Philosophy -->
+  <section class="py-20 px-6 fade-in">
+    <div class="max-w-3xl mx-auto text-center">
+      <h2 class="text-3xl font-bold mb-8">设计哲学</h2>
+      <div class="grid sm:grid-cols-2 gap-6 text-left">
+        <div class="p-5 rounded-lg bg-gray-900/50 border border-gray-800/50">
+          <p class="text-sm font-medium mb-1">用户是中心</p>
+          <p class="text-xs text-gray-500">每一条 Agent 关系都围绕用户而建——服务情感需求、提升任务成效。</p>
+        </div>
+        <div class="p-5 rounded-lg bg-gray-900/50 border border-gray-800/50">
+          <p class="text-sm font-medium mb-1">关系是一等公民</p>
+          <p class="text-xs text-gray-500">不是图的附属品，而是有自己状态、记忆、历史的实体。</p>
+        </div>
+        <div class="p-5 rounded-lg bg-gray-900/50 border border-gray-800/50">
+          <p class="text-sm font-medium mb-1">所有变更通过事件</p>
+          <p class="text-xs text-gray-500">完整可审计、可重放、可持久化。</p>
+        </div>
+        <div class="p-5 rounded-lg bg-gray-900/50 border border-gray-800/50">
+          <p class="text-sm font-medium mb-1">通用而非专用</p>
+          <p class="text-xs text-gray-500">不绑定任何特定框架或运行时，适用于任何 Agent 系统。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-12 px-6 border-t border-gray-800/50">
+    <div class="max-w-5xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-gray-600">
+      <p>MIT License &middot; agents-uni</p>
+      <div class="flex gap-6">
+        <a href="https://github.com/agents-uni" target="_blank" rel="noopener" class="hover:text-gray-400 transition-colors">GitHub</a>
+        <a href="https://www.npmjs.com/org/agents-uni" target="_blank" rel="noopener" class="hover:text-gray-400 transition-colors">npm</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

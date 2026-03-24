@@ -51,12 +51,12 @@
         <a href="../" class="px-2 py-1 rounded border border-gray-700 hover:border-gray-500 text-gray-300 hover:text-gray-100 transition-colors text-xs font-medium">中文</a>
       </div>
       <!-- Mobile hamburger -->
-      <button id="mobile-menu-btn" class="md:hidden text-gray-400 hover:text-gray-100 transition-colors" aria-label="Toggle menu">
+      <button class="md:hidden text-gray-400 hover:text-gray-100 transition-colors" onclick="toggleMobileMenu()" aria-label="Toggle menu">
         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
       </button>
     </div>
     <!-- Mobile nav panel -->
-    <div id="mobile-menu" class="hidden md:hidden border-t border-gray-800/50 bg-gray-950/95 backdrop-blur-lg">
+    <div id="mobileMenu" class="hidden md:hidden border-t border-gray-800/50 bg-gray-950/95 backdrop-blur-lg">
       <div class="px-6 py-4 flex flex-col gap-3 text-sm text-gray-400">
         <a href="#features" class="hover:text-gray-100 transition-colors py-1">Features</a>
         <a href="#ecosystem" class="hover:text-gray-100 transition-colors py-1">Ecosystem</a>
@@ -227,10 +227,10 @@
         <div class="flex items-start justify-between flex-wrap gap-4">
           <div>
             <h3 class="text-xl font-semibold mb-1">@agents-uni/unis</h3>
-            <p class="text-gray-400 text-sm mb-3">Relationship visualization — interactive graph, influence scoring, cluster detection</p>
+            <p class="text-gray-400 text-sm mb-3">Curated universe templates — preset organization scenarios ready to use</p>
             <p class="text-gray-500 text-xs leading-relaxed max-w-lg">
-              Powered by vis-network. Interactive relationship graph with influence scoring, cluster detection, conflict hotspot analysis,
-              and real-time relationship editing — see your organization at a glance.
+              Ready-made universe templates for common multi-agent scenarios. Each template defines agents, roles, relationships,
+              and interaction rules — just install and run to explore different organizational dynamics.
             </p>
           </div>
           <div class="flex gap-3 text-xs">
@@ -340,11 +340,11 @@
     <div class="max-w-4xl mx-auto">
       <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
         <div class="p-6">
-          <div class="text-3xl sm:text-4xl font-bold gradient-text mb-2" data-counter="5">5</div>
+          <div class="text-3xl sm:text-4xl font-bold gradient-text mb-2" data-counter="5">0</div>
           <p class="text-gray-500 text-sm">Packages</p>
         </div>
         <div class="p-6">
-          <div class="text-3xl sm:text-4xl font-bold gradient-text mb-2" data-counter="4">4</div>
+          <div class="text-3xl sm:text-4xl font-bold gradient-text mb-2" data-counter="4">0</div>
           <p class="text-gray-500 text-sm">Relationship Dimensions</p>
         </div>
         <div class="p-6">
@@ -457,23 +457,5 @@ evolution.<span class="func">processEvent</span>(<span class="string">'alice'</s
   </footer>
 
   <script src="../script.js"></script>
-  <script>
-    // Mobile hamburger menu toggle
-    (function () {
-      var btn = document.getElementById('mobile-menu-btn');
-      var menu = document.getElementById('mobile-menu');
-      if (btn && menu) {
-        btn.addEventListener('click', function () {
-          menu.classList.toggle('hidden');
-        });
-        // Close menu when a link is clicked
-        menu.querySelectorAll('a').forEach(function (link) {
-          link.addEventListener('click', function () {
-            menu.classList.add('hidden');
-          });
-        });
-      }
-    })();
-  </script>
 </body>
 </html>

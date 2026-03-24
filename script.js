@@ -70,7 +70,7 @@ function initMobileMenuListeners() {
 // ─── Animated counters ───
 
 function initStatCounters() {
-  const statElements = document.querySelectorAll('.stat-number');
+  const statElements = document.querySelectorAll('[data-counter]');
   if (statElements.length === 0) return;
 
   const observer = new IntersectionObserver(
@@ -89,7 +89,7 @@ function initStatCounters() {
 }
 
 function animateCounter(el) {
-  const target = parseInt(el.getAttribute('data-target'), 10);
+  const target = parseInt(el.getAttribute('data-counter') || el.getAttribute('data-target'), 10);
   if (isNaN(target)) return;
 
   const duration = 1500;

@@ -9,6 +9,22 @@
   <meta property="og:description" content="用组织设计的方式定义 AI Agent 的协作、竞争与进化。" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://agents-uni.github.io" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Agents Uni — AI Agent 组织协议层" />
+  <meta name="twitter:description" content="用组织设计的方式定义 AI Agent 的协作、竞争与进化。" />
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareSourceCode",
+    "name": "Agents Uni",
+    "description": "Universal Protocol Layer for AI Agent Organizations",
+    "url": "https://agents-uni.github.io",
+    "codeRepository": "https://github.com/agents-uni",
+    "programmingLanguage": "TypeScript",
+    "license": "https://opensource.org/licenses/MIT"
+  }
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
@@ -160,6 +176,24 @@
         </div>
       </div>
 
+      <!-- Unis -->
+      <div class="gradient-border p-6 mb-6">
+        <div class="flex items-start justify-between flex-wrap gap-4">
+          <div>
+            <h3 class="text-xl font-semibold mb-1">@agents-uni/unis</h3>
+            <p class="text-gray-400 text-sm mb-3">预设组织模板 — 企业、军队、学术、扁平化、竞技</p>
+            <p class="text-gray-500 text-xs leading-relaxed max-w-lg">
+              开箱即用的 5 种组织模板。每种模板包含角色定义、层级结构、关系预设和流程规则，
+              适用于不同场景：团队协作、竞技对抗、研究讨论、去中心化治理。
+            </p>
+          </div>
+          <div class="flex gap-3 text-xs">
+            <a href="https://www.npmjs.com/package/@agents-uni/unis" target="_blank" rel="noopener" class="text-gray-500 hover:text-gray-300 transition-colors">npm</a>
+            <a href="https://github.com/agents-uni/unis" target="_blank" rel="noopener" class="text-gray-500 hover:text-gray-300 transition-colors">GitHub</a>
+          </div>
+        </div>
+      </div>
+
       <!-- Zhenhuan (Demo) -->
       <div class="rounded-xl bg-gray-900 border border-gray-800 p-6">
         <div class="flex items-start justify-between flex-wrap gap-4">
@@ -177,6 +211,60 @@
             <a href="https://www.npmjs.com/package/@agents-uni/zhenhuan" target="_blank" rel="noopener" class="text-gray-600 hover:text-gray-400 transition-colors">npm</a>
             <a href="https://github.com/agents-uni/zhenhuan" target="_blank" rel="noopener" class="text-gray-600 hover:text-gray-400 transition-colors">GitHub</a>
           </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Use Cases -->
+  <section class="py-20 px-6 fade-in">
+    <div class="max-w-5xl mx-auto">
+      <h2 class="text-3xl font-bold text-center mb-4">应用场景</h2>
+      <p class="text-gray-500 text-center mb-12 max-w-2xl mx-auto">从团队协作到竞技对抗，组织协议适用于各种多 Agent 场景</p>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="use-case-card rounded-xl bg-gray-900 border border-gray-800 p-6">
+          <div class="w-10 h-10 rounded-lg bg-violet-500/10 flex items-center justify-center mb-4 text-xl">&#x1f465;</div>
+          <h3 class="text-base font-semibold mb-2">团队模拟</h3>
+          <p class="text-gray-400 text-xs leading-relaxed">模拟真实团队结构，观察 Agent 在层级、权限、流程约束下的协作行为。</p>
+        </div>
+        <div class="use-case-card rounded-xl bg-gray-900 border border-gray-800 p-6">
+          <div class="w-10 h-10 rounded-lg bg-amber-500/10 flex items-center justify-center mb-4 text-xl">&#x1f3c6;</div>
+          <h3 class="text-base font-semibold mb-2">竞技锦标赛</h3>
+          <p class="text-gray-400 text-xs leading-relaxed">ELO 评分 + 赛季制，让 Agent 在竞争环境中自然涌现策略和联盟。</p>
+        </div>
+        <div class="use-case-card rounded-xl bg-gray-900 border border-gray-800 p-6">
+          <div class="w-10 h-10 rounded-lg bg-blue-500/10 flex items-center justify-center mb-4 text-xl">&#x1f52c;</div>
+          <h3 class="text-base font-semibold mb-2">研究协作</h3>
+          <p class="text-gray-400 text-xs leading-relaxed">学术讨论模式，多个 Agent 从不同角度审视问题，达成或发现分歧。</p>
+        </div>
+        <div class="use-case-card rounded-xl bg-gray-900 border border-gray-800 p-6">
+          <div class="w-10 h-10 rounded-lg bg-emerald-500/10 flex items-center justify-center mb-4 text-xl">&#x1f3db;&#xfe0f;</div>
+          <h3 class="text-base font-semibold mb-2">决策治理</h3>
+          <p class="text-gray-400 text-xs leading-relaxed">去中心化决策流程，Agent 通过投票、辩论、共识机制做出集体决策。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Statistics -->
+  <section class="py-20 px-6 fade-in">
+    <div class="max-w-4xl mx-auto">
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+        <div>
+          <div class="stat-number" data-target="5">0</div>
+          <p class="text-gray-500 text-sm mt-2">核心包</p>
+        </div>
+        <div>
+          <div class="stat-number" data-target="100">0</div>
+          <p class="text-gray-500 text-sm mt-2">% TypeScript</p>
+        </div>
+        <div>
+          <div class="stat-number" data-target="0">0</div>
+          <p class="text-gray-500 text-sm mt-2">关系引擎零依赖</p>
+        </div>
+        <div>
+          <div class="stat-number" data-target="5">0</div>
+          <p class="text-gray-500 text-sm mt-2">组织模板</p>
         </div>
       </div>
     </div>
@@ -240,6 +328,15 @@
 <span class="comment">// 事件驱动关系演化</span>
 evolution.<span class="func">processEvent</span>(<span class="string">'alice'</span>, <span class="string">'bob'</span>, <span class="string">'task.completed_well'</span>);
 <span class="comment">// → trust: 0.50 → 0.55, empowerment: 0.40 → 0.46</span></pre>
+        </div>
+
+        <div>
+          <h3 class="text-sm font-medium text-gray-500 uppercase tracking-wider mb-3">4. 启动群聊</h3>
+          <div class="code-block relative">
+            <span class="text-gray-500">$</span> npx <span class="func">agents-chat</span> serve <span class="type">--universe ./universe.yaml</span>
+            <button onclick="copyToClipboard('npx agents-chat serve --universe ./universe.yaml', this)" class="copy-btn absolute top-3 right-3 text-gray-500 hover:text-gray-300 text-xs">Copy</button>
+          </div>
+          <p class="text-gray-600 text-xs mt-2">打开浏览器访问 <code class="text-violet-400">http://localhost:3000</code>，开始与你的 Agent 群聊</p>
         </div>
       </div>
     </div>

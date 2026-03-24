@@ -1,8 +1,11 @@
 /* Agents Uni — Custom styles (Tailwind CDN handles utility classes) */
 
+/* ─── CSS Variables ─── */
 :root {
   --accent-1: #8b5cf6; /* violet-500 */
   --accent-2: #3b82f6; /* blue-500 */
+  --accent-3: #10b981; /* emerald-500 */
+  --accent-4: #f59e0b; /* amber-500 */
   --bg-primary: #030712; /* gray-950 */
   --bg-card: #111827;    /* gray-900 */
   --bg-card-hover: #1f2937; /* gray-800 */
@@ -11,6 +14,7 @@
   --text-secondary: #9ca3af; /* gray-400 */
 }
 
+/* ─── Global ─── */
 html {
   scroll-behavior: smooth;
 }
@@ -21,7 +25,7 @@ body {
   color: var(--text-primary);
 }
 
-/* Gradient text */
+/* ─── Gradient text ─── */
 .gradient-text {
   background: linear-gradient(135deg, var(--accent-1), var(--accent-2));
   -webkit-background-clip: text;
@@ -29,7 +33,7 @@ body {
   background-clip: text;
 }
 
-/* Gradient border card */
+/* ─── Gradient border card (mask technique) ─── */
 .gradient-border {
   position: relative;
   background: var(--bg-card);
@@ -47,9 +51,10 @@ body {
   mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
   mask-composite: exclude;
+  pointer-events: none;
 }
 
-/* Code block */
+/* ─── Code block ─── */
 .code-block {
   background: #0d1117;
   border: 1px solid var(--border);
@@ -63,28 +68,39 @@ body {
 
 .code-block .comment { color: #6e7681; }
 .code-block .keyword { color: #ff7b72; }
-.code-block .string { color: #a5d6ff; }
-.code-block .func { color: #d2a8ff; }
-.code-block .type { color: #79c0ff; }
+.code-block .string  { color: #a5d6ff; }
+.code-block .func    { color: #d2a8ff; }
+.code-block .type    { color: #79c0ff; }
 
-/* Architecture diagram */
-.arch-line {
-  stroke: var(--accent-1);
-  stroke-width: 2;
-  fill: none;
+/* ─── Hero glow ─── */
+.hero-glow {
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(139, 92, 246, 0.15) 0%, rgba(59, 130, 246, 0.05) 40%, transparent 70%);
+  pointer-events: none;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: hero-pulse 6s ease-in-out infinite;
 }
 
-.arch-node {
-  fill: var(--bg-card);
-  stroke: var(--accent-1);
-  stroke-width: 1.5;
-  rx: 8;
+@keyframes hero-pulse {
+  0%, 100% {
+    opacity: 0.7;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.15);
+  }
 }
 
-/* Scroll animations */
+/* ─── Scroll-triggered fade-in ─── */
 .fade-in {
   opacity: 0;
-  transform: translateY(20px);
+  transform: translateY(24px);
   transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
@@ -93,36 +109,37 @@ body {
   transform: translateY(0);
 }
 
-/* Nav */
+/* ─── Nav ─── */
 nav {
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
 }
 
-/* Glow effect on hero */
-.hero-glow {
-  position: absolute;
-  width: 500px;
-  height: 500px;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(139,92,246,0.15) 0%, transparent 70%);
-  pointer-events: none;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-/* Feature card hover */
+/* ─── Feature card ─── */
 .feature-card {
-  transition: transform 0.2s ease, background-color 0.2s ease;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease;
 }
 
 .feature-card:hover {
-  transform: translateY(-2px);
+  transform: translateY(-4px);
   background-color: var(--bg-card-hover);
+  box-shadow:
+    0 0 0 1px rgba(139, 92, 246, 0.15),
+    0 8px 24px rgba(139, 92, 246, 0.08);
 }
 
-/* Demo badge */
+/* ─── Copy button ─── */
+.copy-btn {
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.code-block:hover .copy-btn,
+.copy-btn:focus {
+  opacity: 1;
+}
+
+/* ─── Demo badge ─── */
 .demo-badge {
   background: linear-gradient(135deg, #374151, #4b5563);
   font-size: 0.625rem;
@@ -132,21 +149,179 @@ nav {
   padding: 0.125rem 0.5rem;
   border-radius: 9999px;
   color: var(--text-secondary);
+  display: inline-block;
 }
 
-/* Copy button */
-.copy-btn {
-  opacity: 0;
-  transition: opacity 0.2s;
+/* ─── Stat number (counter animation) ─── */
+.stat-number {
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1;
+  background: linear-gradient(135deg, var(--accent-1), var(--accent-2));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
-.code-block:hover .copy-btn {
+
+/* ─── Mobile hamburger menu ─── */
+#mobileMenu {
+  display: none;
+  position: fixed;
+  top: 3.5rem; /* below nav h-14 */
+  left: 0;
+  right: 0;
+  background: rgba(3, 7, 18, 0.95);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(55, 65, 81, 0.5);
+  padding: 1rem 1.5rem;
+  z-index: 40;
+  flex-direction: column;
+  gap: 0.75rem;
+  transform: translateY(-100%);
+  opacity: 0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+#mobileMenu.open {
+  display: flex;
+  transform: translateY(0);
   opacity: 1;
 }
 
-/* Responsive */
+#mobileMenu a {
+  display: block;
+  padding: 0.5rem 0;
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+  transition: color 0.2s ease;
+}
+
+#mobileMenu a:hover {
+  color: var(--text-primary);
+}
+
+/* ─── Architecture SVG ─── */
+.arch-node {
+  fill: var(--bg-card);
+  stroke: var(--accent-1);
+  stroke-width: 1.5;
+  rx: 8;
+  transition: fill 0.2s ease, stroke 0.2s ease, filter 0.2s ease;
+}
+
+.arch-node:hover {
+  fill: var(--bg-card-hover);
+  stroke: var(--accent-2);
+  filter: drop-shadow(0 0 8px rgba(139, 92, 246, 0.3));
+  cursor: pointer;
+}
+
+.arch-node.highlighted {
+  stroke: var(--accent-2);
+  stroke-width: 2;
+  filter: drop-shadow(0 0 12px rgba(59, 130, 246, 0.4));
+}
+
+.arch-line {
+  stroke: var(--accent-1);
+  stroke-width: 2;
+  fill: none;
+  stroke-dasharray: 6 4;
+  animation: arch-dash 20s linear infinite;
+}
+
+.arch-line.highlighted {
+  stroke: var(--accent-2);
+  stroke-width: 2.5;
+}
+
+@keyframes arch-dash {
+  to {
+    stroke-dashoffset: -200;
+  }
+}
+
+/* ─── Typewriter ─── */
+.typewriter {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid var(--accent-1);
+  animation: blink-caret 0.75s step-end infinite;
+}
+
+.typewriter.done {
+  border-right-color: transparent;
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent; }
+  50% { border-color: var(--accent-1); }
+}
+
+/* ─── Use-case card ─── */
+.use-case-card {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.use-case-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.3);
+}
+
+/* ─── Responsive ─── */
+
+/* Large tablets / small desktops */
+@media (max-width: 1024px) {
+  .hero-glow {
+    width: 480px;
+    height: 480px;
+  }
+
+  .stat-number {
+    font-size: 2rem;
+  }
+}
+
+/* Tablets */
 @media (max-width: 768px) {
   .hero-glow {
-    width: 300px;
-    height: 300px;
+    width: 320px;
+    height: 320px;
+  }
+
+  .stat-number {
+    font-size: 1.75rem;
+  }
+
+  .code-block {
+    font-size: 0.8rem;
+    padding: 0.75rem 1rem;
+  }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+  .hero-glow {
+    width: 240px;
+    height: 240px;
+  }
+
+  .stat-number {
+    font-size: 1.5rem;
+  }
+
+  .code-block {
+    font-size: 0.75rem;
+    padding: 0.625rem 0.75rem;
+  }
+
+  .gradient-border {
+    border-radius: 0.5rem;
+  }
+
+  .gradient-border::before {
+    border-radius: 0.6rem;
   }
 }
